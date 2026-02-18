@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche Médicament — COSENTYX</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: #f0f2f5;
+    padding: 32px;
+    color: #1a1a2e;
+  }
+
+  .card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 820px;
+    margin: 0 auto;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0a4fa3 0%, #1a73e8 100%);
+    padding: 28px 32px 24px;
+    color: white;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .header .subtitle {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin-top: 4px;
+    font-style: italic;
+  }
+
+  .tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  .tag-frigo  { background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); }
+  .tag-inject { background: rgba(100,220,130,0.25); border: 1px solid rgba(100,220,130,0.5); }
+  .tag-dose   { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); }
+
+  /* GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .section {
+    padding: 20px 24px;
+    border-right: 1px solid #eef0f4;
+    border-bottom: 1px solid #eef0f4;
+    transition: background 0.15s;
+  }
+
+  .section:hover { background: #fafbff; }
+
+  .section:nth-child(even) { border-right: none; }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .section-title.red    { color: #d93025; }
+  .section-title.blue   { color: #1a73e8; }
+  .section-title.orange { color: #e37400; }
+  .section-title.pink   { color: #c2185b; }
+  .section-title.teal   { color: #00796b; }
+  .section-title.brown  { color: #5d4037; }
+
+  .section p {
+    font-size: 0.84rem;
+    line-height: 1.65;
+    color: #3d3d4f;
+  }
+
+  .section p strong {
+    color: #1a1a2e;
+  }
+
+  /* FULL WIDTH sections */
+  .section-full {
+    grid-column: 1 / -1;
+    padding: 20px 24px;
+    border-bottom: 1px solid #eef0f4;
+    transition: background 0.15s;
+  }
+
+  .section-full:hover { background: #fafbff; }
+  .section-full:last-child { border-bottom: none; }
+
+  .section-full p {
+    font-size: 0.84rem;
+    line-height: 1.65;
+    color: #3d3d4f;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .link-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    background: #e8f0fe;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    color: #1a73e8;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+    text-decoration: none;
+  }
+
+  .link-chip:hover { background: #d2e3fc; }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>COSENTYX</h1>
+    <div class="subtitle">(sécukinumab)</div>
+    <div class="tags">
+      <span class="tag tag-frigo">🌡 Frigo</span>
+      <span class="tag tag-inject">✦ Injection SC</span>
+      <span class="tag tag-dose">150mg seringue/stylo</span>
+    </div>
+  </div>
+
+  <!-- GRID 2 colonnes -->
+  <div class="grid">
+
+    <!-- INDICATION & DOSE -->
+    <div class="section">
+      <div class="section-title red">🔴 Indication &amp; Dose</div>
+      <p>
+        <strong>Pso :</strong> 300mg (2×150mg) sem 0,1,2,3,4 puis q4sem<br>
+        <strong>AP/SA :</strong> 150mg sem 0,1,2,3,4 puis q4sem
+      </p>
+    </div>
+
+    <!-- DÉBUT D'ACTION -->
+    <div class="section">
+      <div class="section-title blue">⏱ Début d'action</div>
+      <p>
+        AP : dès la 2e semaine<br>
+        SA : dès la 1re semaine<br>
+        Pso : effets max à la 16e sem
+      </p>
+    </div>
+
+    <!-- PRÉCAUTIONS -->
+    <div class="section">
+      <div class="section-title orange">⚠️ Précautions</div>
+      <p>
+        Allergie au latex (bouchon seringue/stylo)<br>
+        MII (risque exacerbation)
+      </p>
+    </div>
+
+    <!-- GROSSESSE -->
+    <div class="section">
+      <div class="section-title pink">🤰 Grossesses</div>
+      <p>Généralement d/c — autres options avec plus de données disponibles</p>
+    </div>
+
+    <!-- INTERACTIONS -->
+    <div class="section">
+      <div class="section-title teal">🔗 Interactions</div>
+      <p>Aucune interaction majeure connue</p>
+    </div>
+
+    <!-- CONSERVATION -->
+    <div class="section">
+      <div class="section-title brown">🌡 Conservation</div>
+      <p>Réfrigéré 2–8°C · Ne pas congeler</p>
+    </div>
+
+  </div>
+
+  <!-- NOTES PHARMACIEN (pleine largeur) -->
+  <div class="section-full">
+    <div class="section-title orange">📋 Notes pharmacien</div>
+    <p>Suivi sem 3–4 recommandé — confusion fréquente sur induction 5 doses. Assurances approuvent souvent 4 doses à la 1re livraison.</p>
+  </div>
+
+  <!-- PHOTOS / LIENS -->
+  <div class="section-full" style="border-bottom:none;">
+    <div class="section-title blue">🖼 Photos &amp; Vidéos · 🔗 Liens</div>
+    <div class="links">
+      <a class="link-chip" href="#">📷 Images du stylo/seringue</a>
+      <a class="link-chip" href="#">▶ Technique injection</a>
+      <a class="link-chip" href="#">📄 Monographie Santé Canada</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
